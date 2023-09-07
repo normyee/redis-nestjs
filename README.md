@@ -23,40 +23,35 @@
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
 ## Description
+This Redis integration project with NestJS aims to enhance the performance of the `/users` route. It follows Repository patterns, utilizes the Clean Architecture software design, and incorporates Domain-Driven Design (DDD) concepts. Redis is employed as a caching system to expedite requests and provide a more efficient user experience.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
-## Installation
-
+## Set-up
+1.
 ```bash
 $ npm install
 ```
-
-## Running the app
-
+2.
 ```bash
-# development
+# Generation of random data in the API.
+$ npx prisma db seed
+# In case of an error, generate a new migration.
+```
+
+## Start
+
+1.
+```bash
+$ docker-compose up
+```
+2.
+```bash
 $ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
 
-## Test
+## Routes
 
-```bash
-# unit tests
-$ npm run test
+`GET /users` - Retrieve all data from the application's API. If it's cached, the request will be more efficient.
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
 
 ## Support
 
